@@ -12,6 +12,10 @@ namespace G_Net_40_Linq02
             #region Question 3
             var list3 = Source.ProductList.TakeWhile(p => p.UnitPrice < 25);
             #endregion
+            #region Question 4
+            var check = Source.ProductList.All(p => p.Category == "Seafood");
+
+            #endregion 
         }
     }
 }
