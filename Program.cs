@@ -20,6 +20,13 @@ namespace G_Net_40_Linq02
             int[] ids = { 3, 9, 13, 18 };
             var contains = ids.Contains(9);
             #endregion
+            #region Question 6
+            var groupping = Source.ProductList.GroupBy(p => p.Category);
+            foreach (var group in groupping)
+            {
+                Console.WriteLine($"group : {group.Key} Count = {group.Count()}");
+            }
+            #endregion
         }
     }
 }
