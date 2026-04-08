@@ -27,6 +27,13 @@ namespace G_Net_40_Linq02
                 Console.WriteLine($"group : {group.Key} Count = {group.Count()}");
             }
             #endregion
+            #region Question 7
+            var groupping1= Source.ProductList.GroupBy(p => p.Category).Select(g => new
+     {
+         Category = g.Key,
+         ProductNames = g.Select(p => p.ProductName)
+     });
+            #endregion
         }
     }
 }
