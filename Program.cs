@@ -15,7 +15,11 @@ namespace G_Net_40_Linq02
             #region Question 4
             var check = Source.ProductList.All(p => p.Category == "Seafood");
 
-            #endregion 
+            #endregion
+            #region Question 5
+            int[] ids = { 3, 9, 13, 18 };
+            var contains = ids.Contains(9);
+            #endregion
         }
     }
 }
