@@ -38,4 +38,8 @@
             string[] list2 = { "france", "SPAIN", "Italy" };
             var result3 = list1.Except(list2, new StringCaseInsensitiveComparer());
             #endregion
+            #region Question 15
+            var result4 =Source.ProductList.ToDictionary(p=>p.ProductID,p=>p.ProductName);
+            Console.WriteLine($"{result4[18]}");
+            #endregion
         }    }}
