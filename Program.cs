@@ -24,4 +24,7 @@
             var cheap =Source.ProductList.Min(p => p.UnitPrice);
             var expensive = Source.ProductList.Max(p => p.UnitPrice);
             #endregion
+            #region Question 12
+            var distinct = Source.ProductList.Distinct();
+            #endregion
         }    }}
