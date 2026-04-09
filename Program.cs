@@ -17,4 +17,7 @@
                              TotalOrderValue = countryGroup.Sum(cust => cust.Orders.Sum(o => o.Total))
                          };
             #endregion
+            #region Question 10
+            var count1= Source.ProductList.Count();
+            #endregion
         }    }}
