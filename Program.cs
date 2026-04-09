@@ -3,5 +3,18 @@
 
             #endregion
             #region Question 8      var result = Source.ProductList.GroupBy(p => p.Category).Where(g => g.Count() > 3);
-          #endregion
+
+
+
+            #endregion
+            #region Question 9
+            var result1 = from c in Source.CustomerList
+                         group c by c.Country into countryGroup
+                         select new
+                         {
+                             Country = countryGroup.Key,
+                             Count = countryGroup.Count(),
+                             TotalOrderValue = countryGroup.Sum(cust => cust.Orders.Sum(o => o.Total))
+                         };
+            #endregion
         }    }}
