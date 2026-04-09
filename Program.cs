@@ -20,4 +20,8 @@
             #region Question 10
             var count1= Source.ProductList.Count();
             #endregion
+            #region Question 11
+            var cheap =Source.ProductList.Min(p => p.UnitPrice);
+            var expensive = Source.ProductList.Max(p => p.UnitPrice);
+            #endregion
         }    }}
